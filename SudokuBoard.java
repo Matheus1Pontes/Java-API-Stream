@@ -98,7 +98,7 @@ public class SudokuBoard {
                 .flatMap(List::stream)
                 // if *EVERY* spot is not null and the correct option, then it is complete
                 .allMatch(board -> board.getNumber() != null
-                        && board.getNumber() != board.getCorrectNumber());
+                        && board.getNumber() == board.getCorrectNumber());
     }
 
     // this will check to see if the spot is fixed, otherwise, will set all spots to null 
