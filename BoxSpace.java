@@ -34,9 +34,11 @@ public class BoxSpace {
 
     // helper function to print the elements of the SudokuBoard
     public String toString() {
+        // if player did not place a number yet, then it will print a "." for that spot as a placeholder
         if (getNumber() == null) {
             return " .  ";
         } else {
+            // otherwise it will print the number the player placed
             return "{" + getNumber() + "} ";
         }
     }
